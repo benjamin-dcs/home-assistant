@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   height="35.999996"
-   viewBox="0 0 36 35.999996"
+   height="36"
+   viewBox="0 0 36 36"
    width="36"
    version="1.1"
    id="svg4"
@@ -10,10 +10,10 @@
   <defs
      id="defs4" />
   <rect
-     style="fill:none;stroke:#ffff00;stroke-width:2.14744;stroke-opacity:1"
+     style="fill:none;stroke:#ffff00;stroke-width:0.961216;stroke-dasharray:none;stroke-opacity:1"
      id="rect4"
-     width="33.852562"
-     height="33.852558"
-     x="1.07372"
-     y="1.07372" />
+     width="9.038784"
+     height="9.038784"
+     x="0.48060799"
+     y="0.48060799" />
 </svg>
