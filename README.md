@@ -2,10 +2,10 @@ In this repository I provide Automations, Scripts and other files for Home Assis
 
 The code in this repo is often a slightly modified (and untested) version of my personal version. In case of any issues, feel free to create an [issue](https://github.com/benjamin-dcs/home-assistant/issues)
 
-# Table of Contents  
-## [Automations](#automations)  
-## [Scripts](#scripts)  
-## [Snippets](#snippets)  
+# Table of Contents
+- [Automations](#automations)
+- [Scripts](#scripts)  
+- [Snippets](#snippets)  
 
 # [Automations](automations)
 ## [Birthday Notifier](automations/birthday_notifier.yaml)
