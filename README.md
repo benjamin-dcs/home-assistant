@@ -6,7 +6,7 @@ The code in this repo is often a slightly modified (and untested) version of my 
 - [Automations](#automations)
 - [Scripts](#scripts)  
 - [Snippets](#snippets)
-- [Dashboard cards](#dashboard_cards)  
+- [Dashboard cards](#dashboard-cards)  
 
 # [Automations](automations)
 ### [Birthday Notifier](automations/birthday_notifier.yaml)
