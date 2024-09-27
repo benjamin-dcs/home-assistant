@@ -74,7 +74,7 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 </p>
 
 # [Snippets](https://github.com/benjamin-dcs/home-assistant/tree/main/snippets)
-## [Error Handling of Wait For Trigger Action](snippets/error_handling_wait_for_trigger.yaml)
+## [Error Handling for a Wait For Trigger Action](snippets/error_handling_wait_for_trigger.yaml)
 Snippet with a success and fail path for a [`wait for trigger`](https://www.home-assistant.io/docs/scripts/#wait-for-a-trigger) action
 
 # Support
