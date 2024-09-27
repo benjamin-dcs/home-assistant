@@ -46,5 +46,7 @@ Provides a user friendly (visual editor) interface to get a ChatGPT response.
 ## [Set Input Text with ChatGPT](https://github.com/benjamin-dcs/home-assistant/blob/main/scripts/set_input_text_with_chatgpt.yaml)
 ...
 
+# [Snippets](https://github.com/benjamin-dcs/home-assistant/tree/main/snippets)
+...
 
 <a href="https://www.buymeacoffee.com/benjamindcs" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
