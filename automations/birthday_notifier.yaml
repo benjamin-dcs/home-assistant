@@ -1,0 +1,215 @@
+alias: Verjaardag Notifier
+description: ""
+trigger:
+  - platform: time
+    at: "12:00:00"
+    id: 12uur
+  - platform: time_pattern
+    minutes: "0"
+    id: hourly
+condition: []
+action:
+  - alias: 12uur
+    if:
+      - condition: trigger
+        id:
+          - 12uur
+        enabled: true
+    then:
+      - action: calendar.get_events
+        metadata: {}
+        data:
+          start_date_time: >-
+            {{ ((utcnow().replace(hour=0, minute=0, second=0, microsecond=0) +
+            timedelta(days=2, seconds=1)) | as_local).strftime('%Y-%m-%d
+            %H:%M:%S') }}
+          end_date_time: >-
+            {{ ((utcnow().replace(hour=0, minute=0, second=0, microsecond=0) +
+            timedelta(days=3, seconds=-1)) | as_local).strftime('%Y-%m-%d
+            %H:%M:%S') }}
+        target:
+          entity_id: calendar.birthdays_ha
+        response_variable: bdays_2days
+        alias: Events 2days
+      - action: system_log.write
+        metadata: {}
+        data:
+          level: debug
+          message: "{{ bdays_2days }}"
+      - if:
+          - condition: template
+            value_template: "{{ bdays_2days['calendar.birthdays_ha']['events'] | length > 0 }}"
+        then:
+          - repeat:
+              sequence:
+                - variables:
+                    message: >-
+                      {% set summary = repeat.item.summary %}  {% set start =
+                      repeat.item.start | as_datetime %}
+
+                      {% set weekdays = ['zondag', 'maandag', 'dinsdag',
+                      'woensdag', 'donderdag', 'vrijdag', 'zaterdag' ] %}  {%
+                      set bday_wkday = weekdays[start.strftime('%w') | int] %}
+
+                      {% if summary[-5:][:4] | is_number %}
+                        {% set bday_year = summary[-5:][:4] | int %}
+                        {% set age = (now().year - bday_year) | string %}
+                        {% set name = summary[:-6].strip() %}
+                        {% set message = name + ' is ' + bday_wkday + ' jarig en wordt ' + age + '! (' + bday_year | string + ')' %}
+                      {% else %}
+                        {% set name = summary %}
+                        {% set message = name + ' is ' + bday_wkday + ' jarig!' %}
+                      {% endif %}
+
+                      {{ message }}
+                - action: script.notify_me
+                  metadata: {}
+                  data:
+                    service:
+                      - Home Assistant
+                    title: Verjaardag!
+                    message: "{{ message }}"
+              for_each: "{{ bdays_2days['calendar.birthdays_ha']['events'] }}"
+      - action: calendar.get_events
+        metadata: {}
+        data:
+          start_date_time: >-
+            {{ ((utcnow().replace(hour=0, minute=0, second=1, microsecond=0) +
+            timedelta(days=1, seconds=1)) | as_local).strftime('%Y-%m-%d
+            %H:%M:%S') }}
+          end_date_time: >-
+            {{ ((utcnow().replace(hour=0, minute=0, second=0, microsecond=0) +
+            timedelta(days=2, seconds=-1)) | as_local).strftime('%Y-%m-%d
+            %H:%M:%S') }}
+        target:
+          entity_id: calendar.birthdays_ha
+        response_variable: bdays_tomorrow
+        alias: Events tomorrow
+      - action: system_log.write
+        metadata: {}
+        data:
+          level: debug
+          message: "{{ bdays_tomorrow }}"
+      - if:
+          - condition: template
+            value_template: >-
+              {{ bdays_tomorrow['calendar.birthdays_ha']['events'] | length > 0
+              }}
+        then:
+          - repeat:
+              sequence:
+                - variables:
+                    message: >-
+                      {% set summary = repeat.item.summary %}  {% set start =
+                      repeat.item.start | as_datetime %}
+
+                      {% if summary[-5:][:4] | is_number %}
+                        {% set bday_year = summary[-5:][:4] | int %}
+                        {% set age = (now().year - bday_year) | string %}
+                        {% set name = summary[:-6].strip() %}
+                        {% set message = name + ' is morgen jarig en wordt ' + age + '! (' + bday_year | string + ')' %}
+                      {% else %}
+                        {% set name = summary %}
+                        {% set message = name + ' is morgen jarig!' %}
+                      {% endif %}
+
+                      {{ message }}
+                - action: script.notify_me
+                  metadata: {}
+                  data:
+                    service: Home Assistant
+                    title: Verjaardag!
+                    message: "{{ message }}"
+              for_each: "{{ bdays_tomorrow['calendar.birthdays_ha']['events'] }}"
+      - action: calendar.get_events
+        metadata: {}
+        data:
+          end_date_time: >-
+            {{ ((utcnow().replace(hour=0, minute=0, second=0, microsecond=0) +
+            timedelta(days=1, seconds=-1)) | as_local).strftime('%Y-%m-%d
+            %H:%M:%S') }}
+        target:
+          entity_id: calendar.birthdays_ha
+        response_variable: bdays_today
+        alias: Events today
+      - if:
+          - condition: template
+            value_template: "{{ bdays_today['calendar.birthdays_ha']['events'] | length > 0 }}"
+        then:
+          - action: input_boolean.turn_off
+            metadata: {}
+            data: {}
+            target:
+              entity_id: input_boolean.birthday_celebration_sent
+  - alias: hourly
+    if:
+      - condition: or
+        conditions:
+          - condition: and
+            conditions:
+              - condition: trigger
+                id:
+                  - hourly
+              - condition: time
+                after: "12:59:59"
+              - condition: state
+                entity_id: input_boolean.birthday_celebration_sent
+                state: "off"
+          - condition: trigger
+            id:
+              - 12uur
+            enabled: true
+    then:
+      - action: calendar.get_events
+        metadata: {}
+        data:
+          end_date_time: >-
+            {{ ((utcnow().replace(hour=0, minute=0, second=0, microsecond=0) +
+            timedelta(days=1, seconds=-1)) | as_local).strftime('%Y-%m-%d
+            %H:%M:%S') }}
+        target:
+          entity_id: calendar.birthdays_ha
+        response_variable: bdays_today
+        alias: Events today
+      - action: system_log.write
+        metadata: {}
+        data:
+          level: debug
+          message: "{{ bdays_today }}"
+      - if:
+          - condition: template
+            value_template: "{{ bdays_today['calendar.birthdays_ha']['events'] | length > 0 }}"
+        then:
+          - repeat:
+              sequence:
+                - variables:
+                    message: >-
+                      {% set summary = repeat.item.summary %}  {% set start =
+                      repeat.item.start | as_datetime %}
+
+                      {% if summary[-5:][:4] | is_number %}
+                        {% set bday_year = summary[-5:][:4] | int %}
+                        {% set age = (now().year - bday_year) | string %}
+                        {% set name = summary[:-6].strip() %}
+                        {% set message = name + ' is vandaag ' + age + ' geworden!! (' + bday_year | string + ')' %}
+                      {% else %}
+                        {% set name = summary %}
+                        {% set message = name + ' is vandaag jarig!' %}
+                      {% endif %} {% set message = message + ' Tijd om te
+                      feliciteren!' %}
+
+                      {{ message }}
+                - action: script.notify_me
+                  metadata: {}
+                  data:
+                    service:
+                      - Home Assistant
+                    title: Verjaardag!
+                    message: "{{ message }}"
+                    data:
+                      actions:
+                        - action: VERJAARDAG_CELEBRATION_SENT
+                          title: Mark as done
+              for_each: "{{ bdays_today['calendar.birthdays_ha']['events'] }}"
+mode: parallel
+max: 10
