@@ -34,7 +34,9 @@ Provides a user friendly (visual editor) interface to send a notification to one
 - Data object
 - Templatable url field
 
-<img width="796" alt="image" src="https://github.com/user-attachments/assets/458e13b0-0e6a-4e47-950f-e82eddf1fa02">
+<p align="center">
+<img width="750" alt="image" src="https://github.com/user-attachments/assets/924f8dee-e131-4752-9274-81cb048f8a48">
+</p>
 
 ## [Get ChatGPT Response](scripts/get_chatgpt_response.yaml)
 Provides a user friendly (visual editor) interface to get a ChatGPT response.
@@ -45,8 +47,9 @@ Provides a user friendly (visual editor) interface to get a ChatGPT response.
 - Templatable instruction field
 - Selector for ChatGPT model. The model(s) should be exactly the same as your OpenAI Conversation entity. For example model `gpt_4o_mini` uses `conversation.gpt_4o_mini` as conversation agent.
 
-<img width="787" alt="image" src="https://github.com/user-attachments/assets/868415f0-914b-4b32-99b1-dd083b9eef78">
-
+<p align="center">
+<img width="750" src="https://github.com/user-attachments/assets/4fdc4578-1b34-4e14-addf-e1880ea3647e">
+</p>
 
 ## [Set Input Text with ChatGPT](scripts/set_input_text_with_chatgpt.yaml)
 In the majority of my use-cases for a ChatGPT response, I store the result in a Text-Helper. I then use this Text-Helper as the source for my Automation/Script when it runs. At the end of the Automation/Script, I run this `Set Input Text with ChatGPT`-script to renew the Text-Helper. This has two advantages:
@@ -61,11 +64,13 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 - Entity-Selector
 - Remove First And Last Quotes Switch. For some prompts, ChatGPT's response is quoted. This option removes the first and last quote from the response.
 
-![image](https://github.com/user-attachments/assets/a6da515c-2fd7-4f61-8086-7715af30a6e4)
-
-
+<p align="center">
+<img width="750" src="https://github.com/user-attachments/assets/a6da515c-2fd7-4f61-8086-7715af30a6e4">
+</p>
 
 # [Snippets](https://github.com/benjamin-dcs/home-assistant/tree/main/snippets)
-...
+## [Error Handling of Wait For Trigger Action](snippets/error_handling_wait_for_trigger.yaml)
+Snippet with a success and fail path for a [`wait for trigger`](https://www.home-assistant.io/docs/scripts/#wait-for-a-trigger) action
 
+# Support
 <a href="https://www.buymeacoffee.com/benjamindcs" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
