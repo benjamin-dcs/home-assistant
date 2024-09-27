@@ -86,6 +86,7 @@ Snippet with a success and fail path for a [`wait for trigger`](https://www.home
 ![image](https://github.com/user-attachments/assets/8d2c2876-0fc4-4e7d-aae4-191008842019)
 
 ### [Compact Energy Card](dashboard/compact_energy_card.yaml)
+Probably requires some tweaking of the `grid-template-columns` percentages in order to get right on your own dashboard/screen
 <img width="391" alt="image" src="https://github.com/user-attachments/assets/641fd45f-cee0-47a9-a017-63002e0676e2">
 
 
