@@ -2,15 +2,28 @@
 <img width="750" alt="image" src="https://github.com/user-attachments/assets/e98f26d1-8713-459d-b4c5-a32d22fabdd7">
 </p>
 
-In this repository I provide Automations, Scripts and other files for Home Assistant.
+<p align="center">
+<b>In this repository I provide Automations, Scripts and other files for Home Assistant.</b>
+</p>
 
-The code in this repo is often a slightly modified (and untested) version of my personal version. In case of any issues, feel free to create an [issue](https://github.com/benjamin-dcs/home-assistant/issues)
+### Notes
+- The code in this repo is often a slightly modified (and untested) version of my personal version. In case of any issues, feel free to create an [issue](https://github.com/benjamin-dcs/home-assistant/issues)
+- As I am Dutch, some files will contain Dutch text. My guess is that most of you should be able to find your way to Google Translate ;)
 
 # Table of Contents
 - [Automations](#automations)
-- [Scripts](#scripts)  
+  - [Birthday Notifier](#birthday-notifier)
+  - [Notification Action Handler](#notification-action-handler)
+- [Scripts](#scripts)
+  - [Notify Me](#notify-me)
+  - [Get ChatGPT Response](#get-chatgpt-response)
+  - [Set Input Text with ChatGPT](#set-input-text-with-chatgpt)
 - [Snippets](#snippets)
-- [Dashboard cards](#dashboard-cards)  
+  - [Error Handling for a Wait For Trigger Action](#error-handling-for-a-wait-for-trigger-action)
+- [Dashboard cards](#dashboard-cards)
+  - [Button Card Header Button](#button-card-header-button)
+  - [Afvalwijzer Card](#afvalwijzer-card)
+  - [Compact Energy Card](#compact-energy-card)
 
 # [Automations](automations)
 ### [Birthday Notifier](automations/birthday_notifier.yaml)
