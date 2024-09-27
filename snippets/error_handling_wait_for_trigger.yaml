@@ -19,7 +19,7 @@
       data:
         service: Home Assistant
         message: Success!
-        titel: Wait for trigger
+        title: Wait for trigger
   else:
     - action: script.notify_me
       metadata: {}
@@ -28,4 +28,4 @@
           - Home Assistant
           - Home Assistant Persistent
         message: Failed!
-        titel: Wait for trigger
+        title: Wait for trigger
