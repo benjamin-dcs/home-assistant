@@ -13,7 +13,10 @@ When using the second format, the age is calculated and included in the notifica
 - Sends a notification at 12:00 **_1 day_** prior to the birthday
 - Sends a notification **_every hour_**, starting at day of birth until the notification is _Marked as done_ (You have send a celebration message to the person 🎉).
 
-**Dependencies**:
+**Requirements:**
+- Switch Helper: input_boolean.birthday_celebration_sent
+
+**Dependencies:**
 - Uses the [`Notify Me`](https://github.com/benjamin-dcs/home-assistant/blob/main/scripts/notify_me.yaml) Script to send the notifications
 - Uses the [`Notification Action Handler`](https://github.com/benjamin-dcs/home-assistant/blob/main/automations/notification_action_handler.yaml) Automation to handle the _'Mark as done'_ action
 
@@ -24,7 +27,7 @@ Generic Automation to handle all my [Actionable Notifications](https://companion
 ## [Notify Me](https://github.com/benjamin-dcs/home-assistant/blob/main/scripts/notify_me.yaml)
 Provides a user friendly (visual editor) interface to send a notification to one or multiple notification providers, including Home Assistant Persistent Notifications.
 
-**Features**:
+**Features:**
 - (Multi-)Selector for Notification Service(s)
 - Templatable message field
 - Templatable title field
@@ -36,7 +39,7 @@ Provides a user friendly (visual editor) interface to send a notification to one
 ## [Get ChatGPT Response](https://github.com/benjamin-dcs/home-assistant/blob/main/scripts/get_chatgpt_response.yaml)
 Provides a user friendly (visual editor) interface to get a ChatGPT response.
 
-**Features**:
+**Features:**
 - Templatable prompt field
 - Selector for language
 - Templatable instruction field
@@ -46,7 +49,20 @@ Provides a user friendly (visual editor) interface to get a ChatGPT response.
 
 
 ## [Set Input Text with ChatGPT](https://github.com/benjamin-dcs/home-assistant/blob/main/scripts/set_input_text_with_chatgpt.yaml)
-...
+In the majority of my use-cases for a ChatGPT response, I store the result in a Text-Helper. I then use this Text-Helper as the source for my Automation/Script when it runs. At the end of the Automation/Script, I run this `Set Input Text with ChatGPT`-script to renew the Text-Helper. This has two advantages:
+- No extra wait-time from ChatGPT before I need the response. For example, in my doorbell automation I want the notifcation to be send as quickly as possible.
+- When ChatGPT isn't responding for whatever reason, my automation/script will still continue to run because the text is already stored.
+
+**Features:**
+- Templatable prompt field
+- Selector for language
+- Templatable instruction field
+- Selector for ChatGPT model.
+- Entity-Selector
+- Remove First And Last Quotes Switch. For some prompts, ChatGPT's response is quoted. This option removes the first and last quote from the response.
+
+![image](https://github.com/user-attachments/assets/6f3e65f8-fe89-492e-b63d-2341e304f2a2)
+
 
 # [Snippets](https://github.com/benjamin-dcs/home-assistant/tree/main/snippets)
 ...
