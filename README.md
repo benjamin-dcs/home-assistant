@@ -55,6 +55,7 @@ Provides a user friendly (visual editor) interface to send a notification to one
 - Data object
 - Templatable url field
 
+**Screenshot:**
 <p align="center">
 <img width="750" alt="image" src="https://github.com/user-attachments/assets/924f8dee-e131-4752-9274-81cb048f8a48">
 </p>
@@ -68,6 +69,7 @@ Provides a user friendly (visual editor) interface to get a ChatGPT response.
 - Templatable instruction field
 - Selector for ChatGPT model. The model(s) should be exactly the same as your OpenAI Conversation entity. For example model `gpt_4o_mini` uses `conversation.gpt_4o_mini` as conversation agent.
 
+**Screenshot:**
 <p align="center">
 <img width="750" src="https://github.com/user-attachments/assets/4fdc4578-1b34-4e14-addf-e1880ea3647e">
 </p>
@@ -85,6 +87,7 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 - Entity-Selector
 - Remove First And Last Quotes Switch. For some prompts, ChatGPT's response is quoted. This option removes the first and last quote from the response.
 
+**Screenshot:**
 <p align="center">
 <img width="750" src="https://github.com/user-attachments/assets/a6da515c-2fd7-4f61-8086-7715af30a6e4">
 </p>
