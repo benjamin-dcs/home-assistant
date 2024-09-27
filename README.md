@@ -2,6 +2,11 @@ In this repository I provide Automations, Scripts and other files for Home Assis
 
 The code in this repo is often a slightly modified (and untested) version of my personal version. In case of any issues, feel free to create an [issue](https://github.com/benjamin-dcs/home-assistant/issues)
 
+##### Table of Contents  
+[Automations](#automations)  
+[Scripts](#scripts)  
+[Snippets](#snippets)  
+
 # [Automations](automations)
 ## [Birthday Notifier](automations/birthday_notifier.yaml)
 Uses a Home Assistant calender to send several notifications for someone's birthday. Calendar events are expected to be in one of the following two formats:
@@ -68,6 +73,7 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 <img width="750" src="https://github.com/user-attachments/assets/a6da515c-2fd7-4f61-8086-7715af30a6e4">
 </p>
 
+<a name="snippets"/>
 # [Snippets](https://github.com/benjamin-dcs/home-assistant/tree/main/snippets)
 ## [Error Handling of Wait For Trigger Action](snippets/error_handling_wait_for_trigger.yaml)
 Snippet with a success and fail path for a [`wait for trigger`](https://www.home-assistant.io/docs/scripts/#wait-for-a-trigger) action
