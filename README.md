@@ -121,8 +121,8 @@ Probably requires some tweaking of the `grid-template-columns` percentages in or
   - Temperature
   - Time
   - Enabled / Enabled once / Disabled once / Disabled
-  - Staged heating (-1° -> 0.5° -> <Setting>) _(optional)_
-  - Staged cooling (Turn down temp 0.5° <delta> time before night-setting) _(optional)_ 
+  - Staged heating (-1° -> 0.5° -> \<setting\>) _(optional)_
+  - Staged cooling (Turn down temp 0.5° \<delta\> time before night-setting) _(optional)_ 
 
 ### OpenSprinkler dashboard and automation
 <p><img width="1199" alt="image" src="https://github.com/user-attachments/assets/674095f0-da78-4cb3-ad74-beb90fff717e"></p>
