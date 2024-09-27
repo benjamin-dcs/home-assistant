@@ -1,5 +1,7 @@
 In this repository I provide Automations, Scripts and other files for Home Assistant.
 
+The code in this repo is often a slightly modified (and untested) version of my personal version. In case of any issues, feel free to create an [issue](https://github.com/benjamin-dcs/home-assistant/issues)
+
 # [Automations](https://github.com/benjamin-dcs/home-assistant/blob/main/automations/)
 ## [Birthday Notifier](https://github.com/benjamin-dcs/home-assistant/blob/main/automations/birthday_notifier.yaml)
 Uses a Home Assistant calender to send several notifications for someone's birthday. Calendar events are expected to be in one of the following two formats:
