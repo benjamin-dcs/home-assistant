@@ -1,0 +1,205 @@
+type: custom:layout-card
+layout_type: grid
+layout:
+  grid-template-columns: 60% 40%
+  margin: 0px 0px 0px 0px
+cards:
+  - type: energy-distribution
+    link_dashboard: false
+    card_mod:
+      style: |
+        ha-card {
+          height: 100%;
+          margin: 0px 0px 0px -4px;
+          padding: 5px 0 0 0;
+        }
+        .spacer {
+          display: none;
+        }
+        .row {
+          justify-content: center !important;
+        }
+        .circle-container.solar {
+          display: flex;
+          position: absolute;
+          top: 10px;
+        }
+        .circle-container.grid {
+          display: flex;
+          position: absolute;
+          top: 145px;
+          left: 18px;
+        }
+        .circle-container.grid span.label {
+          display: flex !important;
+          position: relative !important;
+          top: -100px;
+        }
+        .lines.high {
+          display: flex;
+          position: absolute;
+          top: 110px;
+        }
+        .circle-container.home {
+          display: flex;
+          position: absolute;
+          top: 145px;
+          right: 18px;
+        }
+        .circle-container.gas {
+          display: flex;
+          position: absolute;
+          top: 235px;
+          left: 14px;
+        }
+        .circle-container.gas span.label {
+          display: flex !important;
+          position: relative !important;
+          top: 100px;
+        }
+        .circle-container.water {
+          display: flex !important;
+          position: absolute !important;
+          top: 255px !important;
+          right: 18px;
+        }
+        .circle-container.gas svg {
+          display: none;
+        }
+        .circle-container.water svg {
+          display: none;
+        }
+  - type: vertical-stack
+    cards:
+      - type: custom:mod-card
+        card_mod:
+          style:
+            hui-vertical-stack-card $: |
+              div#root :nth-child(2) {
+                  margin-top: -4px;
+              }
+        card:
+          type: vertical-stack
+          cards:
+            - type: energy-grid-neutrality-gauge
+              card_mod:
+                style: |
+                  ha-card {
+                    margin-bottom: -4px !important;
+                  }
+                  .type-energy-grid-neutrality-gauge {
+                    margin: 0px -4px 0px 0px;
+                  }
+                  .name {
+                    overflow: hidden;
+                    max-width: 0ch;
+                    white-space: nowrap;
+                  }
+                  ha-svg-icon {
+                    display: none;
+                  }
+            - type: markdown
+              content: Net grid
+              card_mod:
+                style: |
+                  ha-card {
+                    background: none;
+                    box-shadow: none;
+                    height: 0px !important;
+                    margin-top: -4px !important;
+                    top: -25px;
+                    --row-gap: 50px !important;
+                  }
+                  ha-markdown {
+                    padding: 0px !important;
+                    display: flex;
+                    justify-content: center;
+                  }
+      - type: custom:mod-card
+        card_mod:
+          style:
+            hui-vertical-stack-card $: |
+              div#root :nth-child(2) {
+                  margin-top: -4px;
+              }
+        card:
+          type: vertical-stack
+          cards:
+            - type: energy-self-sufficiency-gauge
+              card_mod:
+                style: |
+                  ha-card {
+                    margin-bottom: -4px !important;
+                  }
+                  .type-energy-self-sufficiency-gauge {
+                    margin: 0px -4px 0px 0px;
+                  }
+                  .name {
+                    overflow: hidden;
+                    max-width: 0ch;
+                    white-space: nowrap;
+                  }
+                  ha-svg-icon {
+                    display: none;
+                  }
+            - type: markdown
+              content: Self-suffiency
+              card_mod:
+                style: |
+                  ha-card {
+                    background: none;
+                    box-shadow: none;
+                    height: 0px !important;
+                    margin: 0px !important;
+                    top: -35px;
+                    position: relative;
+                  }
+                  ha-markdown {
+                    padding: 0px !important;
+                    display: flex;
+                    justify-content: center;
+                  }
+      - type: custom:mod-card
+        card_mod:
+          style:
+            hui-vertical-stack-card $: |
+              div#root :nth-child(2) {
+                  margin-top: -4px;
+              }
+        card:
+          type: vertical-stack
+          cards:
+            - type: energy-solar-consumed-gauge
+              card_mod:
+                style: |
+                  ha-card {
+                    margin-bottom: -4px !important;
+                  }
+                  .type-energy-solar-consumed-gauge {
+                    margin: 0px -4px 0px 0px;
+                  }
+                  .name {
+                    overflow: hidden;
+                    max-width: 0ch;
+                    white-space: nowrap;
+                  }
+                  ha-svg-icon {
+                    display: none;
+                  }
+            - type: markdown
+              content: Solar-consumed
+              card_mod:
+                style: |
+                  ha-card {
+                    background: none;
+                    box-shadow: none;
+                    height: 0px !important;
+                    margin: 0px !important;
+                    top: -35px;
+                    position: relative;
+                  }
+                  ha-markdown {
+                    padding: 0px !important;
+                    display: flex;
+                    justify-content: center;
+                  }
