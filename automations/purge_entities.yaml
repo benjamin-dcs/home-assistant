@@ -1,0 +1,32 @@
+alias: Purge entities
+description: ""
+trigger:
+  - platform: time
+    at: "00:00:00"
+condition: []
+action:
+  - alias: Keep 1 day
+    metadata: {}
+    data:
+      keep_days: 1
+      entity_id:
+        - sensor.example1
+        - sensor.example2
+    action: recorder.purge_entities
+  - alias: Keep 3 days
+    metadata: {}
+    data:
+      keep_days: 3
+      entity_id:
+        - sensor.example3
+        - sensor.example4
+    action: recorder.purge_entities
+  - alias: Keep 7 days
+    metadata: {}
+    data:
+      keep_days: 7
+      entity_id:
+        - sensor.example5
+        - sensor.example6
+    action: recorder.purge_entities
+mode: single
