@@ -8,7 +8,7 @@ The code in this repo is often a slightly modified (and untested) version of my 
 - [Snippets](#snippets)  
 
 # [Automations](automations)
-## [Birthday Notifier](automations/birthday_notifier.yaml)
+### [Birthday Notifier](automations/birthday_notifier.yaml)
 Uses a Home Assistant calender to send several notifications for someone's birthday. For Calendar events ending with `(YYYY)` (including the brackets) the age is calculated and added to the notification.
 
 When using the second format, the age is calculated and included in the notification. 
@@ -25,11 +25,11 @@ When using the second format, the age is calculated and included in the notifica
 - Uses the [`Notify Me`](scripts/notify_me.yaml) Script to send the notifications
 - Uses the [`Notification Action Handler`](automations/notification_action_handler.yaml) Automation to handle the _'Mark as done'_ action
 
-## [Notification Action Handler](automations/notification_action_handler.yaml)
+### [Notification Action Handler](automations/notification_action_handler.yaml)
 Generic Automation to handle all my [Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/).
 
 # [Scripts](scripts)
-## [Notify Me](scripts/notify_me.yaml)
+### [Notify Me](scripts/notify_me.yaml)
 Provides a user friendly (visual editor) interface to send a notification to one or multiple notification providers, including Home Assistant Persistent Notifications.
 
 **Features:**
@@ -43,7 +43,7 @@ Provides a user friendly (visual editor) interface to send a notification to one
 <img width="750" alt="image" src="https://github.com/user-attachments/assets/924f8dee-e131-4752-9274-81cb048f8a48">
 </p>
 
-## [Get ChatGPT Response](scripts/get_chatgpt_response.yaml)
+### [Get ChatGPT Response](scripts/get_chatgpt_response.yaml)
 Provides a user friendly (visual editor) interface to get a ChatGPT response.
 
 **Features:**
@@ -56,7 +56,7 @@ Provides a user friendly (visual editor) interface to get a ChatGPT response.
 <img width="750" src="https://github.com/user-attachments/assets/4fdc4578-1b34-4e14-addf-e1880ea3647e">
 </p>
 
-## [Set Input Text with ChatGPT](scripts/set_input_text_with_chatgpt.yaml)
+### [Set Input Text with ChatGPT](scripts/set_input_text_with_chatgpt.yaml)
 In the majority of my use-cases for a ChatGPT response, I store the result in a Text-Helper. I then use this Text-Helper as the source for my Automation/Script when it runs. At the end of the Automation/Script, I run this `Set Input Text with ChatGPT`-script to renew the Text-Helper. This has two advantages:
 - No extra wait-time from ChatGPT before I need the response. For example, in my doorbell automation I want the notifcation to be send as quickly as possible.
 - When ChatGPT isn't responding for whatever reason, my automation/script will still continue to run because the text is already stored.
@@ -74,7 +74,7 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 </p>
 
 # [Snippets](https://github.com/benjamin-dcs/home-assistant/tree/main/snippets)
-## [Error Handling for a Wait For Trigger Action](snippets/error_handling_wait_for_trigger.yaml)
+### [Error Handling for a Wait For Trigger Action](snippets/error_handling_wait_for_trigger.yaml)
 Snippet with a success and fail path for a [`wait for trigger`](https://www.home-assistant.io/docs/scripts/#wait-for-a-trigger) action
 
 # Support
