@@ -16,8 +16,6 @@ The code in this repo is often a slightly modified (and untested) version of my 
 ### [Birthday Notifier](automations/birthday_notifier.yaml)
 Uses a Home Assistant calender to send several notifications for someone's birthday. For Calendar events ending with `(YYYY)` (including the brackets) the age is calculated and added to the notification.
 
-When using the second format, the age is calculated and included in the notification. 
-
 **Features:**
 - Sends a notification at 12:00 **_2 days_** prior to the birthday
 - Sends a notification at 12:00 **_1 day_** prior to the birthday
@@ -79,7 +77,7 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 </p>
 
 # [Snippets](snippets)
-### [Error Handling for a Wait For Trigger Action](dashboard)
+### [Error Handling for a Wait For Trigger Action](snippets/error_handling_wait_for_trigger.yaml)
 Snippet with a success and fail path for a [`wait for trigger`](https://www.home-assistant.io/docs/scripts/#wait-for-a-trigger) action
 
 # [Dashboard cards](dashboard)
