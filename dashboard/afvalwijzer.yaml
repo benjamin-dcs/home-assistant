@@ -1,0 +1,64 @@
+type: custom:auto-entities
+card:
+  type: entities
+filter:
+  exclude:
+    - entity_id: sensor.afvalwijzer*next*
+    - entity_id: sensor.afvalwijzer*to*
+  include:
+    - entity_id: sensor.afvalwijzer_*
+      options:
+        type: custom:template-entity-row
+        state: >-
+          {% set date = states(config.entity) %}  {% if date | string is not
+          match('[0-9]{4}-[0-9]{2}-[0-9]{2}') %}
+            -
+          {% else %}
+            {{ as_datetime(date).strftime('%-d %b') }}
+          {% endif %}
+        secondary: >-
+          {% set datum = states(config.entity) %}  {% if datum | string is not
+          match('[0-9]{4}-[0-9]{2}-[0-9]{2}') %}
+            -
+          {% else %}
+            {% set datum = as_datetime(datum) %}   
+            {% set count
+            = state_attr(config.entity,'days_until_collection_date') | int %}
+            {% set unit = 'dag' if count == 1 else 'dagen' %}
+
+            {% set weekdays = [
+              'zondag',
+              'maandag', 
+              'dinsdag', 
+              'woensdag', 
+              'donderdag', 
+              'vrijdag', 
+              'zaterdag'
+              ]
+            %}
+
+            {% set weekday = datum.strftime('%w') | int %}   
+            {% set weekday_now = now().strftime('%w') | int %} {% set dag = weekdays[weekday] %}
+
+            {% if count == 0 %}
+              {% set phrase = 'Vandaag' %}
+            {% elif count == 2 %} 
+              {% set phrase = dag | capitalize + ', overmorgen' %} 
+            {% elif count == 1 %} 
+              {% set phrase = 'Morgen, ' + dag %}
+            {% elif count < 7 %}
+              {% set phrase = 'Aanstaande ' + dag %}
+            {% elif count < 14 - weekday_now + weekday %}
+              {% set phrase = 'Volgende week ' + dag %}
+            {% else %}
+              {% set diff = ((count - 1) / 7) | int %}
+              {% set unit_week = 'week' if diff == 1 else 'weken' %}
+              {% set phrase = dag | capitalize + ' over ' + diff | string + ' ' + unit_week  %}
+            {% endif %}
+
+            {{phrase}} {% if count != 0%} ({{count}} {{unit}}) {% endif %}
+          {% endif %}
+sort:
+  attribute: days_until_collection_date
+  method: attribute
+  numeric: true

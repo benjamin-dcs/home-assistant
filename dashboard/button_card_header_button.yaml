@@ -1,0 +1,37 @@
+button_card_templates:
+  header_button:
+    entity_picture: |
+      [[[
+        if (hass.themes.darkMode)
+          return "/local/header_square_dark_mode.png?v=10";
+        else
+          return "/local/header_square.png?v=10";
+      ]]]
+    show_entity_picture: true
+    show_label: true
+    show_name: false
+    layout: icon_label
+    styles:
+      card:
+        - height: 30px
+        - padding: 0px
+        - margin-left: 8px
+        - margin-top: '-4px'
+        - margin-bottom: '-4px'
+        - background: none
+        - box-shadow: none
+        - border-radius: 0px
+      grid:
+        - display: flex
+      img_cell:
+        - place-self: start
+        - margin-top: 16px
+        - width: 10px
+        - height: 10px
+      icon:
+        - vertical-align: top
+        - height: 4px
+        - width: 7px
+      label:
+        - place-self: start
+        - font-size: 24px
