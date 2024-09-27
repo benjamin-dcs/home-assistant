@@ -14,6 +14,7 @@
 - [Automations](#automations)
   - [Birthday Notifier](#birthday-notifier)
   - [Notification Action Handler](#notification-action-handler)
+  - [Purge Entities](#purge-entities)
 - [Scripts](#scripts)
   - [Notify Me](#notify-me)
   - [Get ChatGPT Response](#get-chatgpt-response)
@@ -43,6 +44,11 @@ Uses a Home Assistant calender to send several notifications for someone's birth
 
 ### [Notification Action Handler](automations/notification_action_handler.yaml)
 Generic Automation to handle all my [Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/).
+
+### [Purge Entities](automations/purge_entities.yaml)
+Simple automation to purge entites after 1, 3 or 7 days.
+
+**Tip!** Use a tool like [DbStats](https://github.com/jehy/hass-addons/tree/master/dbstats) to analyse your Home Assistant Database. Use the automation for entities that use a lot of disc-space to keep your database as small as possible.
 
 # [Scripts](scripts)
 ### [Notify Me](scripts/notify_me.yaml)
