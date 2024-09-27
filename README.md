@@ -1,11 +1,12 @@
-In this repository I provide Automations, Scripts and other files for Home Assistant.
+![image](https://github.com/user-attachments/assets/4c9c2dcc-8dad-4544-bb5c-903d22558c71)In this repository I provide Automations, Scripts and other files for Home Assistant.
 
 The code in this repo is often a slightly modified (and untested) version of my personal version. In case of any issues, feel free to create an [issue](https://github.com/benjamin-dcs/home-assistant/issues)
 
 # Table of Contents
 - [Automations](#automations)
 - [Scripts](#scripts)  
-- [Snippets](#snippets)  
+- [Snippets](#snippets)
+- [Dashboard cards](#dashboard_cards)  
 
 # [Automations](automations)
 ### [Birthday Notifier](automations/birthday_notifier.yaml)
@@ -73,9 +74,16 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 <img width="750" src="https://github.com/user-attachments/assets/a6da515c-2fd7-4f61-8086-7715af30a6e4">
 </p>
 
-# [Snippets](https://github.com/benjamin-dcs/home-assistant/tree/main/snippets)
-### [Error Handling for a Wait For Trigger Action](snippets/error_handling_wait_for_trigger.yaml)
+# [Snippets](snippets)
+### [Error Handling for a Wait For Trigger Action](dashboard)
 Snippet with a success and fail path for a [`wait for trigger`](https://www.home-assistant.io/docs/scripts/#wait-for-a-trigger) action
+
+# [Dashboard cards]
+### [Button Card Header Card](dashboard/button_card_header_button.yaml)
+![image](https://github.com/user-attachments/assets/8aca0570-061b-4697-9616-301440979fca)
+
+### [Afvalwijzer Card](dashboard/afvalwijzer.yaml)
+![image](https://github.com/user-attachments/assets/8d2c2876-0fc4-4e7d-aae4-191008842019)
 
 # Support
 <a href="https://www.buymeacoffee.com/benjamindcs" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
