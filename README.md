@@ -1,3 +1,7 @@
+<p align="center">
+<img width="750" alt="image" src="https://github.com/user-attachments/assets/e98f26d1-8713-459d-b4c5-a32d22fabdd7">
+</p>
+
 In this repository I provide Automations, Scripts and other files for Home Assistant.
 
 The code in this repo is often a slightly modified (and untested) version of my personal version. In case of any issues, feel free to create an [issue](https://github.com/benjamin-dcs/home-assistant/issues)
