@@ -78,7 +78,7 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 ### [Error Handling for a Wait For Trigger Action](dashboard)
 Snippet with a success and fail path for a [`wait for trigger`](https://www.home-assistant.io/docs/scripts/#wait-for-a-trigger) action
 
-# [Dashboard cards]
+# [Dashboard cards](dashboard)
 ### [Button Card Header Button](dashboard/button_card_header_button.yaml)
 ![image](https://github.com/user-attachments/assets/8aca0570-061b-4697-9616-301440979fca)
 
