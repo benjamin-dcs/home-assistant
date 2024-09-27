@@ -61,7 +61,8 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 - Entity-Selector
 - Remove First And Last Quotes Switch. For some prompts, ChatGPT's response is quoted. This option removes the first and last quote from the response.
 
-![image](https://github.com/user-attachments/assets/6f3e65f8-fe89-492e-b63d-2341e304f2a2)
+![image](https://github.com/user-attachments/assets/a6da515c-2fd7-4f61-8086-7715af30a6e4)
+
 
 
 # [Snippets](https://github.com/benjamin-dcs/home-assistant/tree/main/snippets)
