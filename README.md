@@ -2,8 +2,8 @@ In this repository I provide Automations, Scripts and other files for Home Assis
 
 The code in this repo is often a slightly modified (and untested) version of my personal version. In case of any issues, feel free to create an [issue](https://github.com/benjamin-dcs/home-assistant/issues)
 
-# [Automations](https://github.com/benjamin-dcs/home-assistant/blob/main/automations/)
-## [Birthday Notifier](https://github.com/benjamin-dcs/home-assistant/blob/main/automations/birthday_notifier.yaml)
+# [Automations](automations)
+## [Birthday Notifier](automations/birthday_notifier.yaml)
 Uses a Home Assistant calender to send several notifications for someone's birthday. Calendar events are expected to be in one of the following two formats:
 - \<Name\>
 - \<Name\> (YYYY)
@@ -17,14 +17,14 @@ When using the second format, the age is calculated and included in the notifica
 - Switch Helper: input_boolean.birthday_celebration_sent
 
 **Dependencies:**
-- Uses the [`Notify Me`](https://github.com/benjamin-dcs/home-assistant/blob/main/scripts/notify_me.yaml) Script to send the notifications
-- Uses the [`Notification Action Handler`](https://github.com/benjamin-dcs/home-assistant/blob/main/automations/notification_action_handler.yaml) Automation to handle the _'Mark as done'_ action
+- Uses the [`Notify Me`](scripts/notify_me.yaml) Script to send the notifications
+- Uses the [`Notification Action Handler`](automations/notification_action_handler.yaml) Automation to handle the _'Mark as done'_ action
 
-## [Notification Action Handler](https://github.com/benjamin-dcs/home-assistant/blob/main/automations/notification_action_handler.yaml)
+## [Notification Action Handler](automations/notification_action_handler.yaml)
 Generic Automation to handle all my [Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/).
 
-# [Scripts](https://github.com/benjamin-dcs/home-assistant/tree/main/scripts)
-## [Notify Me](https://github.com/benjamin-dcs/home-assistant/blob/main/scripts/notify_me.yaml)
+# [Scripts](scripts)
+## [Notify Me](scripts/notify_me.yaml)
 Provides a user friendly (visual editor) interface to send a notification to one or multiple notification providers, including Home Assistant Persistent Notifications.
 
 **Features:**
@@ -36,7 +36,7 @@ Provides a user friendly (visual editor) interface to send a notification to one
 
 <img width="796" alt="image" src="https://github.com/user-attachments/assets/458e13b0-0e6a-4e47-950f-e82eddf1fa02">
 
-## [Get ChatGPT Response](https://github.com/benjamin-dcs/home-assistant/blob/main/scripts/get_chatgpt_response.yaml)
+## [Get ChatGPT Response](scripts/get_chatgpt_response.yaml)
 Provides a user friendly (visual editor) interface to get a ChatGPT response.
 
 **Features:**
@@ -48,7 +48,7 @@ Provides a user friendly (visual editor) interface to get a ChatGPT response.
 <img width="787" alt="image" src="https://github.com/user-attachments/assets/868415f0-914b-4b32-99b1-dd083b9eef78">
 
 
-## [Set Input Text with ChatGPT](https://github.com/benjamin-dcs/home-assistant/blob/main/scripts/set_input_text_with_chatgpt.yaml)
+## [Set Input Text with ChatGPT](scripts/set_input_text_with_chatgpt.yaml)
 In the majority of my use-cases for a ChatGPT response, I store the result in a Text-Helper. I then use this Text-Helper as the source for my Automation/Script when it runs. At the end of the Automation/Script, I run this `Set Input Text with ChatGPT`-script to renew the Text-Helper. This has two advantages:
 - No extra wait-time from ChatGPT before I need the response. For example, in my doorbell automation I want the notifcation to be send as quickly as possible.
 - When ChatGPT isn't responding for whatever reason, my automation/script will still continue to run because the text is already stored.
