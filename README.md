@@ -25,6 +25,7 @@
   - [Button Card Header Button](#button-card-header-button)
   - [Afvalwijzer Card](#afvalwijzer-card)
   - [Compact Energy Card](#compact-energy-card)
+- [Todo / On Request](#todo--on-request)
 
 # [Automations](automations)
 ### [Birthday Notifier](automations/birthday_notifier.yaml)
@@ -107,6 +108,28 @@ Snippet with a success and fail path for a [`wait for trigger`](https://www.home
 Probably requires some tweaking of the `grid-template-columns` percentages in order to get right on your own dashboard/screen
 
 <img width="391" alt="image" src="https://github.com/user-attachments/assets/641fd45f-cee0-47a9-a017-63002e0676e2">
+
+# Todo / On Request
+### Thermostat controller and card
+**Screenshot:**
+<p><img width="389" alt="image" src="https://github.com/user-attachments/assets/b6ef98f8-28f1-4c08-af6f-ce7df4127bf0"></p>
+
+**Features:**
+- Day / Night settings:
+  - Temperature
+  - Time
+  - Enabled / Enabled once / Disabled once / Disabled
+  - Staged heating (-1° -> 0.5° -> <Setting>) _(optional)_
+  - Staged cooling (Turn down temp 0.5° <delta> time before night-setting) _(optional)_ 
+
+### OpenSprinkler dashboard and automation
+<p><img width="1199" alt="image" src="https://github.com/user-attachments/assets/674095f0-da78-4cb3-ad74-beb90fff717e"></p>
+
+**Features:**
+- 2 programs to configure (Uses two valves for my 'grass'-zone. Other zones have one valve)
+- Dashboard card to view upcoming zones/times
+- Notifications when starting/switching/finishing
+- Track water used
 
 # Support
 <a href="https://www.buymeacoffee.com/benjamindcs" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
