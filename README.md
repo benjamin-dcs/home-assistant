@@ -26,6 +26,8 @@
   - [Afvalwijzer Card](#afvalwijzer-card)
   - [Compact Energy Card](#compact-energy-card)
 - [Todo / On Request](#todo--on-request)
+  - [Thermostat controller and card](#thermostat-controller-and-card)
+  - [OpenSprinkler dashboard and automation](#opensprinkler-dashboard-and-automation)
 
 # [Automations](automations)
 ### [Birthday Notifier](automations/birthday_notifier.yaml)
