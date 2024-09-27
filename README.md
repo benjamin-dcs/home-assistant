@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/4c9c2dcc-8dad-4544-bb5c-903d22558c71)In this repository I provide Automations, Scripts and other files for Home Assistant.
+In this repository I provide Automations, Scripts and other files for Home Assistant.
 
 The code in this repo is often a slightly modified (and untested) version of my personal version. In case of any issues, feel free to create an [issue](https://github.com/benjamin-dcs/home-assistant/issues)
 
@@ -79,7 +79,7 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 Snippet with a success and fail path for a [`wait for trigger`](https://www.home-assistant.io/docs/scripts/#wait-for-a-trigger) action
 
 # [Dashboard cards]
-### [Button Card Header Card](dashboard/button_card_header_button.yaml)
+### [Button Card Header Button](dashboard/button_card_header_button.yaml)
 ![image](https://github.com/user-attachments/assets/8aca0570-061b-4697-9616-301440979fca)
 
 ### [Afvalwijzer Card](dashboard/afvalwijzer.yaml)
