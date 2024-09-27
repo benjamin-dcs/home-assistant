@@ -11,7 +11,7 @@ When using the second format, the age is calculated and included in the notifica
 - Sends a notification at 12:00 **_1 day_** prior to the birthday
 - Sends a notification **_every hour_**, starting at day of birth until the notification is _Marked as done_ (You have send a celebration message to the person 🎉).
 
-**Dependencies:
+**Dependencies**:
 - Uses the [`Notify Me`](https://github.com/benjamin-dcs/home-assistant/blob/main/scripts/notify_me.yaml) Script to handle the _'Mark as done'_ action
 - Uses the [`Notification Action Handler`](https://github.com/benjamin-dcs/home-assistant/blob/main/automations/notification_action_handler.yaml) Automation to handle the _'Mark as done'_ action
 
