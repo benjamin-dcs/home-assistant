@@ -1,0 +1,61 @@
+alias: Get ChatGPT Response
+fields:
+  prompt:
+    selector:
+      text: null
+    name: Prompt
+    required: true
+  language:
+    selector:
+      select:
+        options:
+          - nl
+    name: Language
+    required: true
+    default: nl
+  instruction:
+    selector:
+      text: {}
+    name: Instruction
+    required: false
+    default: >-
+      You are a voice assistant for Home Assistant. Answer in plain text. Keep
+      it simple and to the point.
+  model:
+    selector:
+      select:
+        options:
+          - chatgpt_3_5_turbo
+          - chatgpt_4o
+          - gpt_4o_mini
+    name: Model
+    required: true
+    default: chatgpt_3_5_turbo
+sequence:
+  - variables:
+      agent_id: "{{ 'conversation.' + model }}"
+      instruction_language: |-
+        {% if language == 'nl' %}
+          {{ instruction + ' Answer in Dutch.' }}
+        {% endif %}
+  - metadata: {}
+    data:
+      value: "{{ instruction_language }}"
+    target:
+      entity_id: input_text.chat_gpt_instruction
+    action: input_text.set_value
+  - data:
+      agent_id: "{{ agent_id }}"
+      language: "{{ language }}"
+      text: "{{ prompt }}"
+    response_variable: agent
+    action: conversation.process
+  - variables:
+      success: |
+        {{ agent.response.response_type == 'action_done' }}
+      message: >
+        {{ {'success': success, 'message': agent.response.speech.plain.speech}
+        }}
+  - stop: returning message
+    response_variable: message
+description: ""
