@@ -35,7 +35,7 @@ Provides a user friendly (visual editor) interface to send a notification to one
 - Templatable url field
 
 <p align="center">
-<img width="750" alt="image" src="https://github.com/user-attachments/assets/458e13b0-0e6a-4e47-950f-e82eddf1fa02">
+<img width="750" alt="image" src="https://github.com/user-attachments/assets/924f8dee-e131-4752-9274-81cb048f8a48">
 </p>
 
 ## [Get ChatGPT Response](scripts/get_chatgpt_response.yaml)
@@ -48,7 +48,7 @@ Provides a user friendly (visual editor) interface to get a ChatGPT response.
 - Selector for ChatGPT model. The model(s) should be exactly the same as your OpenAI Conversation entity. For example model `gpt_4o_mini` uses `conversation.gpt_4o_mini` as conversation agent.
 
 <p align="center">
-<img width="750" src="https://github.com/user-attachments/assets/868415f0-914b-4b32-99b1-dd083b9eef78">
+<img width="750" src="https://github.com/user-attachments/assets/4fdc4578-1b34-4e14-addf-e1880ea3647e">
 </p>
 
 ## [Set Input Text with ChatGPT](scripts/set_input_text_with_chatgpt.yaml)
