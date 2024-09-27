@@ -73,7 +73,6 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 <img width="750" src="https://github.com/user-attachments/assets/a6da515c-2fd7-4f61-8086-7715af30a6e4">
 </p>
 
-<a name="snippets"/>
 # [Snippets](https://github.com/benjamin-dcs/home-assistant/tree/main/snippets)
 ## [Error Handling of Wait For Trigger Action](snippets/error_handling_wait_for_trigger.yaml)
 Snippet with a success and fail path for a [`wait for trigger`](https://www.home-assistant.io/docs/scripts/#wait-for-a-trigger) action
