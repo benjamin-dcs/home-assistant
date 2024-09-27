@@ -9,11 +9,11 @@ The code in this repo is often a slightly modified (and untested) version of my 
 
 # [Automations](automations)
 ## [Birthday Notifier](automations/birthday_notifier.yaml)
-Uses a Home Assistant calender to send several notifications for someone's birthday. Calendar events are expected to be in one of the following two formats:
-- \<Name\>
-- \<Name\> (YYYY)
+Uses a Home Assistant calender to send several notifications for someone's birthday. For Calendar events ending with `(YYYY)` (including the brackets) the age is calculated and added to the notification.
 
 When using the second format, the age is calculated and included in the notification. 
+
+**Features:**
 - Sends a notification at 12:00 **_2 days_** prior to the birthday
 - Sends a notification at 12:00 **_1 day_** prior to the birthday
 - Sends a notification **_every hour_**, starting at day of birth until the notification is _Marked as done_ (You have send a celebration message to the person 🎉).
