@@ -85,5 +85,9 @@ Snippet with a success and fail path for a [`wait for trigger`](https://www.home
 ### [Afvalwijzer Card](dashboard/afvalwijzer.yaml)
 ![image](https://github.com/user-attachments/assets/8d2c2876-0fc4-4e7d-aae4-191008842019)
 
+### [Compact Energy Card](dashboard/compact_energy_card.yaml)
+<img width="391" alt="image" src="https://github.com/user-attachments/assets/641fd45f-cee0-47a9-a017-63002e0676e2">
+
+
 # Support
 <a href="https://www.buymeacoffee.com/benjamindcs" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
