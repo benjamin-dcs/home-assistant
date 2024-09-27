@@ -1,0 +1,20 @@
+alias: Notification Action Handler
+description: ""
+trigger:
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data: {}
+action:
+  - choose:
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger.event.data.action == 'VERJAARDAG_CELEBRATION_SENT' }}"
+        sequence:
+          - action: input_boolean.turn_on
+            metadata: {}
+            data: {}
+            target:
+              entity_id: input_boolean.birthday_celebration_sent
+        alias: VERJAARDAG_CELEBRATION_SENT
+mode: parallel
+max: 10
