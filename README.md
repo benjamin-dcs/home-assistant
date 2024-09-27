@@ -34,7 +34,9 @@ Provides a user friendly (visual editor) interface to send a notification to one
 - Data object
 - Templatable url field
 
-<img width="796" alt="image" src="https://github.com/user-attachments/assets/458e13b0-0e6a-4e47-950f-e82eddf1fa02">
+<p align="center">
+<img width="750" alt="image" src="https://github.com/user-attachments/assets/458e13b0-0e6a-4e47-950f-e82eddf1fa02">
+</p>
 
 ## [Get ChatGPT Response](scripts/get_chatgpt_response.yaml)
 Provides a user friendly (visual editor) interface to get a ChatGPT response.
@@ -45,7 +47,9 @@ Provides a user friendly (visual editor) interface to get a ChatGPT response.
 - Templatable instruction field
 - Selector for ChatGPT model. The model(s) should be exactly the same as your OpenAI Conversation entity. For example model `gpt_4o_mini` uses `conversation.gpt_4o_mini` as conversation agent.
 
-<img width="787" alt="image" src="https://github.com/user-attachments/assets/868415f0-914b-4b32-99b1-dd083b9eef78">
+<p align="center">
+<img width="750" src="https://github.com/user-attachments/assets/868415f0-914b-4b32-99b1-dd083b9eef78">
+</p>
 
 
 ## [Set Input Text with ChatGPT](scripts/set_input_text_with_chatgpt.yaml)
@@ -61,7 +65,9 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 - Entity-Selector
 - Remove First And Last Quotes Switch. For some prompts, ChatGPT's response is quoted. This option removes the first and last quote from the response.
 
-![image](https://github.com/user-attachments/assets/a6da515c-2fd7-4f61-8086-7715af30a6e4)
+<p align="center">
+<img width="750" src="https://github.com/user-attachments/assets/a6da515c-2fd7-4f61-8086-7715af30a6e4">
+</p>
 
 
 
