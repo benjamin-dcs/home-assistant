@@ -51,7 +51,6 @@ Provides a user friendly (visual editor) interface to get a ChatGPT response.
 <img width="750" src="https://github.com/user-attachments/assets/868415f0-914b-4b32-99b1-dd083b9eef78">
 </p>
 
-
 ## [Set Input Text with ChatGPT](scripts/set_input_text_with_chatgpt.yaml)
 In the majority of my use-cases for a ChatGPT response, I store the result in a Text-Helper. I then use this Text-Helper as the source for my Automation/Script when it runs. At the end of the Automation/Script, I run this `Set Input Text with ChatGPT`-script to renew the Text-Helper. This has two advantages:
 - No extra wait-time from ChatGPT before I need the response. For example, in my doorbell automation I want the notifcation to be send as quickly as possible.
@@ -69,9 +68,9 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 <img width="750" src="https://github.com/user-attachments/assets/a6da515c-2fd7-4f61-8086-7715af30a6e4">
 </p>
 
-
-
 # [Snippets](https://github.com/benjamin-dcs/home-assistant/tree/main/snippets)
-...
+## [Error Handling of Wait For Trigger Action](snippets/error_handling_wait_for_trigger.yaml)
+Snippet with a success and fail path for a [`wait for trigger`](https://www.home-assistant.io/docs/scripts/#wait-for-a-trigger) action
 
+# Support
 <a href="https://www.buymeacoffee.com/benjamindcs" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
