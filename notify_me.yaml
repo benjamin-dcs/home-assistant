@@ -1,0 +1,150 @@
+alias: Notify Me
+fields:
+  service:
+    selector:
+      select:
+        options:
+          - Home Assistant
+          - Home Assistant Persistent
+          - Pushover
+          - WhatsApp
+        multiple: true
+    name: Service
+    default: Home Assistant
+    required: true
+  message:
+    selector:
+      template: {}
+    name: Message
+    required: true
+  title:
+    selector:
+      template: {}
+    name: Title
+  data:
+    selector:
+      object: {}
+    name: Data
+  url:
+    selector:
+      template: {}
+    name: URL
+description: ""
+sequence:
+  - data:
+      Notify_Me: debug
+    action: logger.set_level
+  - variables:
+      service: >-
+        {% set valid_services = ['Home Assistant', 'Home Assistant Persistent',
+        'Pushover', 'WhatsApp'] %} {% if service is not defined or service == []
+        %}
+          {% set service = ['Home Assistant'] %}
+        {% elif service is string %}
+          {% set service = [service] %}
+        {% endif %}
+
+        {% set ns = namespace(result=[]) %} {% for s in service %}
+          {% if s in valid_services %}
+            {% set ns.result = ns.result + [s] %}
+          {% endif %}
+        {% endfor %}
+
+        {% if ns.result | length == 0 %} 
+          {% set ns.result = ['Home Assistant'] %}
+        {% endif %}
+
+        {{ ns.result }}
+  - data:
+      level: debug
+      message: |-
+        service: {{ service }}
+        message: {{ message }}
+        title: {{ title }}
+        data: {{ data }}
+        url: {{ url }}
+      logger: Notify_Me
+    action: system_log.write
+  - alias: Home Assistant
+    if:
+      - condition: template
+        value_template: |-
+          {{ 
+            'Home Assistant' in service  
+          }}
+    then:
+      - variables:
+          data: |-
+            {% set data = data if data is defined and data is mapping else {} %}
+            {% if url is defined and url is string %}
+              {% set actions = data['actions'] if (data['actions'] is defined and data['actions'] is list) else [] %}
+              {% set actions = actions + [ {'action': 'URI', 'title': 'Open URL', 'url': url} ] %}
+              {% set data = dict.from_keys(data.items() | rejectattr('0', 'in', ['actions'] ) | list + [ ['actions', actions] ] ) %}
+            {% endif %}
+            {{ data }}
+      - action: notify.group_my_ha_companion_app_s
+        metadata: {}
+        data:
+          message: "{{ message }}"
+          title: "{{ title }}"
+          data: "{{ data }}"
+  - alias: Home Assistant Persistent
+    if:
+      - condition: template
+        value_template: "{{ 'Home Assistant Persistent' in service }}"
+    then:
+      - variables:
+          message: |-
+            {% if url is defined and url is string %}
+              {{ message + '\n\n' + url }}
+            {% else %}
+              {{ message }}
+            {% endif %}
+      - action: notify.persistent_notification
+        metadata: {}
+        data:
+          message: "{{ message }}"
+          title: "{{ title }}"
+  - alias: Pushover
+    if:
+      - condition: template
+        value_template: "{{ 'Pushover' in service }}"
+    then:
+      - variables:
+          data: |-
+            {% set temp = [] %}
+            {% if data['priority'] is defined %}
+              {% set temp = [ ['priority', data['priority']] ] %}
+              {% if data['priority'] | int == 2 %}
+                {% set temp = temp + [ ['retry', 60], ['expire', 300] ] %}
+              {% endif %}
+            {% endif %}
+
+            {% if url is defined and url is string %}
+              {% set temp = temp + [ ['url', url] ] %}
+            {% endif %}
+
+            {{ dict.from_keys(temp) }}
+      - action: notify.pushover
+        metadata: {}
+        data:
+          message: "{{ message }}"
+          title: "{{ title }}"
+          data: "{{ data }}"
+  - alias: WhatsApp
+    if:
+      - condition: template
+        value_template: "{{ 'WhatsApp' in service }}"
+    then:
+      - variables:
+          message: |-
+            {% if url is defined and url is string %}
+              {{ message + '\n\n' + url }}
+            {% else %}
+              {{ message }}
+            {% endif %}
+      - action: script.send_whatsapp_message_to_me
+        metadata: {}
+        data:
+          message: "{{ message }}"
+          title: "{{ title }}"
