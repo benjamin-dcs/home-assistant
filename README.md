@@ -132,6 +132,3 @@ Probably requires some tweaking of the `grid-template-columns` percentages in or
 - Dashboard card to view upcoming zones/times
 - Notifications when starting/switching/finishing
 - Track water used
-
-# Support
-<a href="https://www.buymeacoffee.com/benjamindcs" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
