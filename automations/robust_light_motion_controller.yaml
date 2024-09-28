@@ -15,9 +15,6 @@ trigger:
     entity_id:
       - binary_sensor.motion_sensor_occupancy
     from: "on"
-  - platform: time
-    at: input_datetime.light_turn_off
-    id: turn_off
   - platform: event
     event_type: timer.finished
     event_data:
