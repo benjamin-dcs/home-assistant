@@ -54,7 +54,7 @@ Simple automation to purge entites after 1, 3 or 7 days.
 
 **Tip!** Use a tool like [DbStats](https://github.com/jehy/hass-addons/tree/master/dbstats) to analyse your Home Assistant Database. Use the automation for entities that use a lot of disc-space to keep your database as small as possible.
 
-### [Robust Light Motion Controller] (automations/robust_light_motion_controller.yaml)
+### [Robust Light Motion Controller](automations/robust_light_motion_controller.yaml)
 Robust automation to control a light based on motion and illuminance.
 
 **Features:**
