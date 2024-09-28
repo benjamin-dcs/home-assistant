@@ -15,7 +15,7 @@
   - [Birthday Notifier](#birthday-notifier)
   - [Notification Action Handler](#notification-action-handler)
   - [Purge Entities](#purge-entities)
-  - [Robust Light Motion Controller](#robust_light_motion_controller)
+  - [Robust Light Motion Controller](#robust-light-motion-controller)
 - [Scripts](#scripts)
   - [Notify Me](#notify-me)
   - [Get ChatGPT Response](#get-chatgpt-response)
@@ -58,7 +58,10 @@ Simple automation to purge entites after 1, 3 or 7 days.
 Robust automation to control a light based on motion and illuminance.
 
 **Features:**
-- ...
+- Keep the light on for xx seconds (input_number.illuminace_threshold_motion_sensors) after no motion is detected anymore
+- Multiple short-running trigger to turn on and off the light. No waiting (running automations) between turn on and turn off.
+- Will keep the light and on reset the timer when motion is detected again (between 'no motion detected' and 'turn light off')
+- Turn light off when HA restarts 
 
 **Requirements:**
 - Timer Helper: timer.light_turn_off
