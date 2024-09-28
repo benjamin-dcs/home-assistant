@@ -1,0 +1,73 @@
+alias: Robust Light Motion Controller
+description: ""
+trigger:
+  - platform: state
+    id: motion_on
+    entity_id:
+      - binary_sensor.motion_sensor_occupancy
+    to: "on"
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 0
+  - platform: state
+    id: motion_off
+    entity_id:
+      - binary_sensor.motion_sensor_occupancy
+    from: "on"
+  - platform: time
+    at: input_datetime.light_turn_off
+    id: turn_off
+  - platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.light_turn_off
+    id: turn_off
+  - platform: homeassistant
+    event: start
+    id: ha_start
+condition: []
+action:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: motion_on
+          - condition: template
+            value_template: |-
+              {{ states('sensor.motion_sensor_illuminance_lux') | float <= 
+                states('input_number.illuminace_threshold_motion_sensors') | float }}
+        sequence:
+          - metadata: {}
+            data: {}
+            target:
+              entity_id: timer.light_turn_off
+            action: timer.cancel
+          - data: {}
+            target:
+              entity_id: light.light_example
+            action: light.turn_on
+      - conditions:
+          - condition: trigger
+            id: motion_off
+          - condition: state
+            entity_id: light.light_example
+            state: "on"
+        sequence:
+          - metadata: {}
+            data:
+              duration: "{{ states('input_number.light_off_delay') }}"
+            target:
+              entity_id: timer.light_turn_off
+            action: timer.start
+      - conditions:
+          - condition: trigger
+            id:
+              - turn_off
+              - ha_start
+        sequence:
+          - data: {}
+            target:
+              entity_id: light.light_example
+            action: light.turn_off
+mode: queued
+max: 10
