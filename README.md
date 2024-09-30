@@ -1,5 +1,5 @@
 <p align="center">
-<img width="750" alt="image" src="https://github.com/user-attachments/assets/e98f26d1-8713-459d-b4c5-a32d22fabdd7">
+<img width="750" alt="image" src="https://github.com/user-attachments/assets/12bdbd4b-f5f4-4ab7-89aa-4a3b443f7fa8">
 </p>
 
 <p align="center">
@@ -23,8 +23,8 @@
 - [Snippets](#snippets)
   - [Error Handling for a Wait For Trigger Action](#error-handling-for-a-wait-for-trigger-action)
 - [Dashboard cards](#dashboard-cards)
+  - [Afvalwijzer Card 🇳🇱](#afvalwijzer-card-)
   - [Button Card Header Button](#button-card-header-button)
-  - [Afvalwijzer Card](#afvalwijzer-card)
   - [Compact Energy Card](#compact-energy-card)
 - [Todo / On Request](#todo--on-request)
   - [Thermostat controller and card](#thermostat-controller-and-card)
@@ -39,7 +39,7 @@ Uses a Home Assistant calender to send several notifications for someone's birth
 - Sends a notification at 12:00 **_1 day_** prior to the birthday
 - Sends a notification **_every hour_**, starting at day of birth until the notification is _Marked as done_ (You have send a celebration message to the person 🎉).
 
-**Requirements:**
+**Prerequisites:**
 - Switch Helper: input_boolean.birthday_celebration_sent
 
 **Dependencies:**
@@ -63,7 +63,7 @@ Robust automation to control a light based on motion and illuminance.
 - Will keep the light and on reset the timer when motion is detected again (between 'no motion detected' and 'turn light off')
 - Turn light off when HA restarts 
 
-**Requirements:**
+**Prerequisites:**
 - Timer Helper: timer.light_turn_off
 - Input Number Helper: input_number.illuminace_threshold_motion_sensors
 
@@ -111,21 +111,54 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 
 # [Snippets](snippets)
 ### [Error Handling for a Wait For Trigger Action](snippets/error_handling_wait_for_trigger.yaml)
-Snippet with a success and fail path for a [`wait for trigger`](https://www.home-assistant.io/docs/scripts/#wait-for-a-trigger) action
+Snippet with a _success_ and _fail_ path for a [`wait for trigger`](https://www.home-assistant.io/docs/scripts/#wait-for-a-trigger) action
 
 # [Dashboard cards](dashboard)
+### [Afvalwijzer Card 🇳🇱](dashboard/afvalwijzer.yaml)
+_Based on other cards from the community. I improved the readable text._
+
+![image](https://github.com/user-attachments/assets/8d2c2876-0fc4-4e7d-aae4-191008842019)
+
+**Features:**
+- Uses `auto-entities` card from HACS to **sort** the upcoming dates for the HACS `afvalwijzer` integration
+- Readable (🇳🇱) sentence for the upcoming pickup dates 
+  - Vandaag
+  - Morgen
+  - Overmorgen
+  - Aanstaande `<dag>`
+  - Volgende week  `<dag>`
+  - `<dag>` over `<xx>` week/weken
+
+**Prerequisites:**
+- auto-entities card from HACS:
+
+  [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=https%3A%2F%2Fgithub.com%2Fthomasloven%2Flovelace-auto-entities&category=Dashboard&owner=Thomas+Lov%C3%A9n+)
+
 ### [Button Card Header Button](dashboard/button_card_header_button.yaml)
 ![image](https://github.com/user-attachments/assets/8aca0570-061b-4697-9616-301440979fca)
-
-### [Afvalwijzer Card](dashboard/afvalwijzer.yaml)
-![image](https://github.com/user-attachments/assets/8d2c2876-0fc4-4e7d-aae4-191008842019)
 
 ### [Compact Energy Card](dashboard/compact_energy_card.yaml)
 Probably requires some tweaking of the `grid-template-columns` percentages in order to get right on your own dashboard/screen
 
 <img width="391" alt="image" src="https://github.com/user-attachments/assets/641fd45f-cee0-47a9-a017-63002e0676e2">
 
+**Prerequisites:**
+- card-mod from HACS:
+
+  [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=https%3A%2F%2Fgithub.com%2Fthomasloven%2Flovelace-card-mod&owner=Thomas+Lov%C3%A9n+&category=Dashboard)
+
+- layout-card from HACS:
+
+  [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=https%3A%2F%2Fgithub.com%2Fthomasloven%2Flovelace-layout-card&owner=Thomas+Lov%C3%A9n+&category=Dashboard)
+
 # Todo / On Request
+If there's any interest, I can publish the code for the Automations/Scripts/Dashboard cards below:
+
+For any other request, try:
+- [Home Assistant](https://www.facebook.com/groups/HomeAssistant) Facebook group
+- [Home Assistant [Dutch]](https://www.facebook.com/groups/HomeAssistantNL) Facebook group
+- Feel free to create an [issue](https://github.com/benjamin-dcs/home-assistant/issues). If I see good use for your idea, maybe I'll help :)!
+
 ### Thermostat controller and card
 **Screenshot:**
 <p><img width="389" alt="image" src="https://github.com/user-attachments/assets/b6ef98f8-28f1-4c08-af6f-ce7df4127bf0"></p>
@@ -146,3 +179,6 @@ Probably requires some tweaking of the `grid-template-columns` percentages in or
 - Dashboard card to view upcoming zones/times
 - Notifications when starting/switching/finishing
 - Track water used
+
+# Support
+<a href="https://www.buymeacoffee.com/benjamindcs" target="_blank"><img src="https://github.com/user-attachments/assets/aad214c4-cfbe-4663-8d00-6833dd4fad3e" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
