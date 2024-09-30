@@ -111,10 +111,12 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 
 # [Snippets](snippets)
 ### [Error Handling for a Wait For Trigger Action](snippets/error_handling_wait_for_trigger.yaml)
-Snippet with a success and fail path for a [`wait for trigger`](https://www.home-assistant.io/docs/scripts/#wait-for-a-trigger) action
+Snippet with a _success_ and _fail_ path for a [`wait for trigger`](https://www.home-assistant.io/docs/scripts/#wait-for-a-trigger) action
 
 # [Dashboard cards](dashboard)
 ### [Afvalwijzer Card 🇳🇱](dashboard/afvalwijzer.yaml)
+_Based on other cards from the community. I improved the readable text._
+
 ![image](https://github.com/user-attachments/assets/8d2c2876-0fc4-4e7d-aae4-191008842019)
 
 **Features:**
@@ -130,7 +132,7 @@ Snippet with a success and fail path for a [`wait for trigger`](https://www.home
 **Prerequisites:**
 - auto-entities card from HACS:
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=https%3A%2F%2Fgithub.com%2Fthomasloven%2Flovelace-auto-entities&category=Dashboard&owner=Thomas+Lov%C3%A9n+)
+  [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=https%3A%2F%2Fgithub.com%2Fthomasloven%2Flovelace-auto-entities&category=Dashboard&owner=Thomas+Lov%C3%A9n+)
 
 ### [Button Card Header Button](dashboard/button_card_header_button.yaml)
 ![image](https://github.com/user-attachments/assets/8aca0570-061b-4697-9616-301440979fca)
@@ -139,6 +141,15 @@ Snippet with a success and fail path for a [`wait for trigger`](https://www.home
 Probably requires some tweaking of the `grid-template-columns` percentages in order to get right on your own dashboard/screen
 
 <img width="391" alt="image" src="https://github.com/user-attachments/assets/641fd45f-cee0-47a9-a017-63002e0676e2">
+
+**Prerequisites:**
+- card-mod from HACS:
+
+  [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=https%3A%2F%2Fgithub.com%2Fthomasloven%2Flovelace-card-mod&owner=Thomas+Lov%C3%A9n+&category=Dashboard)
+
+- layout-card from HACS:
+
+  [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=https%3A%2F%2Fgithub.com%2Fthomasloven%2Flovelace-layout-card&owner=Thomas+Lov%C3%A9n+&category=Dashboard)
 
 # Todo / On Request
 If there's any interest, I can publish the code for the Automations/Scripts/Dashboard cards below:
