@@ -44,8 +44,8 @@ Uses a Home Assistant calender to send several notifications for someone's birth
 - Switch Helper: input_boolean.birthday_celebration_sent
 
 **Dependencies:**
-- Uses the [`Notify Me`](scripts/notify_me.yaml) Script to send the notifications
-- Uses the [`Notification Action Handler`](automations/notification_action_handler.yaml) Automation to handle the _'Mark as done'_ action
+- Uses the [`Notify Me`](scripts/notify_me.yaml) script to send the notifications
+- Uses the [`Notification Action Handler`](automations/notification_action_handler.yaml) automation to handle the _'Mark as done'_ action
 
 ### [Notification Action Handler](automations/notification_action_handler.yaml)
 Generic Automation to handle all my [Actionable Notifications](https://companion.home-assistant.io/docs/notifications/actionable-notifications/).
@@ -111,7 +111,7 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 <p><img width="750" src="https://github.com/user-attachments/assets/a6da515c-2fd7-4f61-8086-7715af30a6e4"></p>
 
 **Dependencies:**
-- Uses the [`Get ChatGPT Response`](scripts/get_chatgpt_response.yaml) Script to generate the ChatGPT response
+- Uses the [`Get ChatGPT Response`](scripts/get_chatgpt_response.yaml) script to generate the ChatGPT response
 
 # [Snippets](snippets)
 ### [ChatGPT TTS Goodbye Message 🇳🇱](snippets/chatgpt_goodbye.yaml)
@@ -125,8 +125,8 @@ Geeft leuke teksten als:
 - Bedankt voor het luisteren, maar ik moet je verlaten. Jij hebt tenslotte ook rust nodig van mijn genialiteit. Tot nooit!
 
 **Dependencies:**
-- Uses the [`Get ChatGPT Response`](scripts/get_chatgpt_response.yaml) Script to generate the ChatGPT response
-- Uses the [`Set Input Text with ChatGPT`](scripts/set_input_text_with_chatgpt.yaml) Script to set the value of a Text Helper based on a ChatGPT prompt
+- Uses the [`Get ChatGPT Response`](scripts/get_chatgpt_response.yaml) script to generate the ChatGPT response
+- Uses the [`Set Input Text with ChatGPT`](scripts/set_input_text_with_chatgpt.yaml) script to set the value of a Text Helper based on a ChatGPT prompt
 
 ### [Error Handling for a Wait For Trigger Action](snippets/error_handling_wait_for_trigger.yaml)
 Snippet with a _success_ and _fail_ path for a [`wait for trigger`](https://www.home-assistant.io/docs/scripts/#wait-for-a-trigger) action
@@ -193,7 +193,7 @@ For any other request, try:
 <p><img width="1199" alt="image" src="https://github.com/user-attachments/assets/674095f0-da78-4cb3-ad74-beb90fff717e"></p>
 
 **Features:**
-- 2 programs to configure (Uses two valves for my 'grass'-zone. Other zones have one valve)
+- 2 programs to configure (uses two valves for my 'grass'-zone. Other zones have one valve)
 - Dashboard card to view upcoming zones/times
 - Notifications when starting/switching/finishing
 - Track water used
