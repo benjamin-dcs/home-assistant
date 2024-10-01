@@ -160,7 +160,7 @@ _Based on other cards from the community. I improved the readable text._
 **Prerequisites:**
 - Config Template Card from HACS:
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Ian+Richardson&repository=https%3A%2F%2Fgithub.com%2Fiantrich%2Fconfig-template-card&category=Dashboard)
+  [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Ian+Richardson&repository=https%3A%2F%2Fgithub.com%2Fiantrich%2Fconfig-template-card&category=Dashboard)
 
 
 ### [Button Card Header Button](dashboard/button_card_header_button.yaml)
