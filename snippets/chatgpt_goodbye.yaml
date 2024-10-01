@@ -1,0 +1,15 @@
+action: script.set_input_text_with_chatgpt
+data:
+  language: nl
+  instruction: >-
+    You are a voice assistant for Home Assistant in a Sonos smart speaker.
+    Answer in plain text. Keep it simple and to the point.
+  model: gpt_4o_mini
+  remove_first_and_last_quotes: true
+  prompt: >-
+    Genereer een ludiek, kort berichtje van maximaal 20 woorden dat afgespeeld
+    wordt op de speaker voordat deze wordt uitgezet. Dit zijn dus jouw eigen
+    laatste woorden. Voeg een vrolijke dosis cynisme, narcisme en sarcasme 
+    toe.  Geen emoji's
+  input_text: input_text.sonos_kantoor_shutdown_next_message
+metadata: {}
