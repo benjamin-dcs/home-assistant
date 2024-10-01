@@ -26,7 +26,7 @@
   - [Error Handling for a Wait For Trigger Action](#error-handling-for-a-wait-for-trigger-action)
 - [Dashboard cards](#dashboard-cards)
   - [Afvalwijzer Card 🇳🇱](#afvalwijzer-card-)
-  - [ApexCharts Sunrise Sunset](#apexcharts_sunrise_sunset)
+  - [ApexCharts Sunrise Sunset](#apexcharts-sunrise-sunset)
   - [Button Card Header Button](#button-card-header-button)
   - [Compact Energy Card](#compact-energy-card)
 - [Todo / On Request](#todo--on-request)
