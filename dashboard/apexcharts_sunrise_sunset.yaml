@@ -1,0 +1,51 @@
+type: custom:config-template-card
+variables:
+  SUNRISE_HR: >-
+    new
+    Date(Date.parse(states['sensor.sunsetsunrise_today_sunrise'].state)).getHours()
+  SUNSET_HR: >-
+    new
+    Date(Date.parse(states['sensor.sunsetsunrise_today_sunset'].state)).getHours()
+entities:
+  - sensor.solax_yieldtoday
+  - sensor.solax_ac_power
+card:
+  type: custom:apexcharts-card
+  style: |
+    div#graph {
+      margin: -8px -0px -8px 0px;
+    }
+  graph_span: |-
+    "${ 
+      (SUNSET_HR - SUNRISE_HR + 1).toString() + 'h' 
+    }"
+  header:
+    show: true
+    title: Solar Production
+    show_states: true
+  now:
+    show: true
+  span:
+    start: day
+    offset: |-
+      "${
+        '+' + SUNRISE_HR + 'h'
+      }"
+  apex_config:
+    chart:
+      height: 175px
+    legend:
+      show: false
+  series:
+    - entity: sensor.solax_yieldtoday
+      show:
+        in_chart: false
+        name_in_header: false
+    - entity: sensor.solax_ac_power
+      type: line
+      fill_raw: last
+      color: 488fc2
+      stroke_width: 2
+      extend_to: false
+      show:
+        name_in_header: false

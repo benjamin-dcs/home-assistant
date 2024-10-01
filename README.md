@@ -26,6 +26,7 @@
   - [Error Handling for a Wait For Trigger Action](#error-handling-for-a-wait-for-trigger-action)
 - [Dashboard cards](#dashboard-cards)
   - [Afvalwijzer Card 🇳🇱](#afvalwijzer-card-)
+  - [ApexCharts Sunrise Sunset](#apexcharts-sunrise-sunset)
   - [Button Card Header Button](#button-card-header-button)
   - [Compact Energy Card](#compact-energy-card)
 - [Todo / On Request](#todo--on-request)
@@ -148,6 +149,19 @@ _Based on other cards from the community. I improved the readable text._
 - auto-entities card from HACS:
 
   [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=https%3A%2F%2Fgithub.com%2Fthomasloven%2Flovelace-auto-entities&category=Dashboard&owner=Thomas+Lov%C3%A9n+)
+
+### [ApexCharts Sunrise Sunset](dashboard/apexcharts_sunrise_sunset.yaml)
+
+<img width="388" alt="image" src="https://github.com/user-attachments/assets/164862ee-d98c-42fd-840b-20a01a183a0f">
+
+**Features:**
+- Adjust the begin and end of the x-axis of your ApexChart to the sunrise and sunset times
+
+**Prerequisites:**
+- Config Template Card from HACS:
+
+  [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Ian+Richardson&repository=https%3A%2F%2Fgithub.com%2Fiantrich%2Fconfig-template-card&category=Dashboard)
+
 
 ### [Button Card Header Button](dashboard/button_card_header_button.yaml)
 ![image](https://github.com/user-attachments/assets/8aca0570-061b-4697-9616-301440979fca)
