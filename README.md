@@ -16,6 +16,8 @@
   - [Notification Action Handler](#notification-action-handler)
   - [Purge Entities](#purge-entities)
   - [Robust Light Motion Controller](#robust-light-motion-controller)
+- [Integrations](#integrations)
+  - [File++](#file)
 - [Scripts](#scripts)
   - [Notify Me](#notify-me)
   - [Get ChatGPT Response](#get-chatgpt-response)
@@ -66,6 +68,19 @@ Robust automation to control a light based on motion and illuminance.
 **Prerequisites:**
 - Timer Helper: timer.light_turn_off
 - Input Number Helper: input_number.illuminace_threshold_motion_sensors
+
+# [Integrations](integrations)
+⚠️ My programming skills definitely do **not** exceed that of an amateur/hobbyist :D! In case of any feedback/issues, feel free to create an [issue](https://github.com/benjamin-dcs/home-assistant/issues).
+
+### [File++](/integrations/file_plusplus)
+Based on the Home Assistant Core Integrations [`File`](https://www.home-assistant.io/integrations/file/), I created a custom version that reads and writes **multi-line** content. I personally use this to load email-templates and store data larger than 255 characters (which is the max of a Text Helper (any entity for that matter)).
+
+**Features:**
+- Use the `notify` service to write multi-line content to a local file
+- Use the `sensor` service to read multi-line content from a local file. The content is available in the `content` attribute of the sensor.
+
+**Removed:**
+- No header is written to empty/new files
 
 # [Scripts](scripts)
 ### [Notify Me](scripts/notify_me.yaml)
