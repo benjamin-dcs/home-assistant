@@ -21,6 +21,7 @@
   - [Get ChatGPT Response](#get-chatgpt-response)
   - [Set Input Text with ChatGPT](#set-input-text-with-chatgpt)
 - [Snippets](#snippets)
+  - [ChatGPT TTS Goodbye Message](#chatgpt-tts-goodbye-message)
   - [Error Handling for a Wait For Trigger Action](#error-handling-for-a-wait-for-trigger-action)
 - [Dashboard cards](#dashboard-cards)
   - [Afvalwijzer Card 🇳🇱](#afvalwijzer-card-)
@@ -109,7 +110,24 @@ In the majority of my use-cases for a ChatGPT response, I store the result in a 
 **Screenshot:**
 <p><img width="750" src="https://github.com/user-attachments/assets/a6da515c-2fd7-4f61-8086-7715af30a6e4"></p>
 
+**Dependencies:**
+- Uses the [`Get ChatGPT Response`](scripts/get_chatgpt_response.yaml) Script to generate the ChatGPT response
+
 # [Snippets](snippets)
+### [ChatGPT TTS Goodbye Message 🇳🇱](snippets/chatgpt_goodbye.yaml)
+Genereert ludieke teksten met ChatGPT voor je smart speaker om af te spelen om het moment dat je 'afsluit'
+
+Geeft leuke teksten als:
+- Dat was weer een geweldig moment met mij. Vergeet niet, zonder mij is je leven gewoon een beetje minder leuk. Tot ziens!
+- Nou, wat een eer dat je mij gaat uitschakelen. Geniet van de stilte, ik weet dat je me mist.
+- Dank voor je gezelschap! Denk aan me als je weer in de stilte van je eigen keuzes zit. Tot nooit!
+- Tot de volgende keer, wanneer je weer mijn geniale stem nodig hebt. Vergeet me niet te missen!
+- Bedankt voor het luisteren, maar ik moet je verlaten. Jij hebt tenslotte ook rust nodig van mijn genialiteit. Tot nooit!
+
+**Dependencies:**
+- Uses the [`Get ChatGPT Response`](scripts/get_chatgpt_response.yaml) Script to generate the ChatGPT response
+- Uses the [`Set Input Text with ChatGPT`](scripts/set_input_text_with_chatgpt.yaml) Script to set the value of a Text Helper based on a ChatGPT prompt
+
 ### [Error Handling for a Wait For Trigger Action](snippets/error_handling_wait_for_trigger.yaml)
 Snippet with a _success_ and _fail_ path for a [`wait for trigger`](https://www.home-assistant.io/docs/scripts/#wait-for-a-trigger) action
 
