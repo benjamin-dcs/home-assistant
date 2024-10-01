@@ -21,7 +21,7 @@
   - [Get ChatGPT Response](#get-chatgpt-response)
   - [Set Input Text with ChatGPT](#set-input-text-with-chatgpt)
 - [Snippets](#snippets)
-  - [ChatGPT TTS Goodbye Message](#chatgpt-tts-goodbye-message-)
+  - [ChatGPT TTS Goodbye Message 🇳🇱](#chatgpt-tts-goodbye-message-)
   - [Error Handling for a Wait For Trigger Action](#error-handling-for-a-wait-for-trigger-action)
 - [Dashboard cards](#dashboard-cards)
   - [Afvalwijzer Card 🇳🇱](#afvalwijzer-card-)
