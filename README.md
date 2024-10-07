@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-<b>In this repository I provide Automations, Scripts and other files for Home Assistant.</b>
+<b>In this repository I provide Automations, Integrations, Scripts and other files for Home Assistant.</b>
 </p>
 
 ### Notes
