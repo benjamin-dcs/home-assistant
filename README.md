@@ -81,7 +81,7 @@ Test copies of the [`Official Zigbee2MQTT Home Assistant addon`](https://github.
 - https://github.com/multi-z2m-2/hassio-zigbee2mqtt
 - https://github.com/multi-z2m-3/hassio-zigbee2mqtt
 
-I'm able to succesfully add multiple sources in the addons store:
+I'm able to succesfully add multiple repositories in the addons store:
 <img width="1249" alt="image" src="https://github.com/user-attachments/assets/896457e6-df31-48f3-9062-cca9cdb5ce78">
 
 
