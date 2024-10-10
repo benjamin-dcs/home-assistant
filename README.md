@@ -17,7 +17,7 @@
   - [Purge Entities](#purge-entities)
   - [Robust Light Motion Controller](#robust-light-motion-controller)
 - [Addons](#addons)
-  - [Multiple 'Official Zigbee2MQTT Home Assistant addons'](#multiple-official-zigbee2mqtt-home-assistant-addons-test)
+  - [Multiple 'Official Zigbee2MQTT Home Assistant addons'](#multiple-official-zigbee2mqtt-home-assistant-addons)
 - [Integrations](#integrations)
   - [File++](https://github.com/benjamin-dcs/File-plusplus)
 - [Scripts](#scripts)
@@ -74,12 +74,19 @@ Robust automation to control a light based on motion and illuminance.
 - Input Number Helper: input_number.illuminace_threshold_motion_sensors
 
 # Addons
-### Multiple 'Official Zigbee2MQTT Home Assistant addons' (test!)
-Test copies of the [`Official Zigbee2MQTT Home Assistant addon`](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt) for running multiple coordinators. Untested, but looking for people to test.
+### Multiple 'Official Zigbee2MQTT Home Assistant addons'
+Multiple forks from the [`Official Zigbee2MQTT Home Assistant addon`](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt) for running multiple coordinators. 
 
 - https://github.com/multi-z2m-1/hassio-zigbee2mqtt
 - https://github.com/multi-z2m-2/hassio-zigbee2mqtt
 - https://github.com/multi-z2m-3/hassio-zigbee2mqtt
+- https://github.com/multi-z2m-4/hassio-zigbee2mqtt
+- https://github.com/multi-z2m-5/hassio-zigbee2mqtt
+- https://github.com/multi-z2m-6/hassio-zigbee2mqtt
+- https://github.com/multi-z2m-7/hassio-zigbee2mqtt
+- https://github.com/multi-z2m-8/hassio-zigbee2mqtt
+- https://github.com/multi-z2m-9/hassio-zigbee2mqtt
+- https://github.com/multi-z2m-10/hassio-zigbee2mqtt
 
 I'm able to succesfully add multiple repositories in the addons store:
 <img width="1249" alt="image" src="https://github.com/user-attachments/assets/896457e6-df31-48f3-9062-cca9cdb5ce78">
