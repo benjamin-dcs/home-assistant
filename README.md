@@ -75,7 +75,7 @@ Robust automation to control a light based on motion and illuminance.
 
 # Addons
 ### Multiple 'Official Zigbee2MQTT Home Assistant addons'
-Multiple forks from the [`Official Zigbee2MQTT Home Assistant addon`](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt) for running multiple coordinators. 
+Multiple forks from the [`Official Zigbee2MQTT Home Assistant addon`](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt) for running multiple coordinators. The forks are automatically synced with the base repository.
 
 - https://github.com/multi-z2m-1/hassio-zigbee2mqtt
 - https://github.com/multi-z2m-2/hassio-zigbee2mqtt
