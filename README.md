@@ -91,6 +91,9 @@ Multiple forks from the [`Official Zigbee2MQTT Home Assistant addon`](https://gi
 I'm able to succesfully add multiple repositories in the addons store:
 <img width="1249" alt="image" src="https://github.com/user-attachments/assets/896457e6-df31-48f3-9062-cca9cdb5ce78">
 
+For further instructions you can follow these Youtube tutorials. For the url's use the list above:
+- https://www.youtube.com/watch?v=QOx733CU1p8
+- https://www.youtube.com/watch?v=ZBbl0I-Zpuk
 
 # [Scripts](scripts)
 ### [Notify Me](scripts/notify_me.yaml)
