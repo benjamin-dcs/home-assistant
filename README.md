@@ -20,6 +20,7 @@
   - [Multiple 'Official Zigbee2MQTT Home Assistant addons'](#multiple-official-zigbee2mqtt-home-assistant-addons)
 - [Integrations](#integrations)
   - [File++](https://github.com/benjamin-dcs/File-plusplus)
+  - [Itho WiFi Add-on (Sensor Integration)](https://github.com/jasperslits/haithowifi/)
 - [Scripts](#scripts)
   - [Notify Me](#notify-me)
   - [Get ChatGPT Response](#get-chatgpt-response)
